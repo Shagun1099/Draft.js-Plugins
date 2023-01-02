@@ -2,7 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import "@draft-js-plugins/hashtag/lib/plugin.css";
+import "@draft-js-plugins/alignment/lib/plugin.css";
+import "@draft-js-plugins/undo/lib/plugin.css";
+import "@draft-js-plugins/anchor/lib/plugin.css";
+import "@draft-js-plugins/linkify/lib/plugin.css";
+import "@draft-js-plugins/focus/lib/plugin.css";
+import "@draft-js-plugins/text-alignment/lib/plugin.css";
+import "draft-js/dist/Draft.css";
+import "@draft-js-plugins/static-toolbar/lib/plugin.css";
+import "@draft-js-plugins/image/lib/plugin.css";
+import "draft-js-mention-plugin/lib/plugin.css";
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,7 +23,3 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

@@ -1,38 +1,182 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap');
+
+.header{
+  font-family: 'Cabin Sketch', cursive !important;
+  font-size: 80px;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  color: #ff5eb4e0;
+}
+
+p,
+h1,
+h2,
+h3,
+h3 {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+.editor {
+  min-height: 200px;
+  max-height: 300px;
+  height: max-content;
+  background: rgb(249, 249, 249);
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: inset 0px 1px 8px -3px #ababab;
+  overflow: hidden;
+  overflow-y: auto;
+  line-height: 110%;
+}
+
+.name-comp {
+  background: #ff5eb4e0;
+  padding: 4px 4px;
+  border-radius: 4px;
+  color: white;
+  font-weight: 500;
+}
+
+.link-comp,
+.hashtag {
+  color: deepskyblue !important;
+}
+
+.userList,
+.imageList {
+  background-color: rgb(101, 204, 255);
+  padding: 0px 10px;
+  border-radius: 4px;
+  height: fit-content;
+}
+
+.imageList {
+  background-color: #ff5eb4e0;
+}
+
+.imageList > .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.imageList > .grid > .image {
+  height: 130px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.imageList > .grid > .image > img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  cursor: grab;
+}
+
+.userList > H3 {
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.user {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.833);
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px 0px;
+}
+
+.user > img {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.user > div > h3 {
+  line-height: 100%;
+  font-weight: 600;
+  margin-top: 1px;
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+.user > div {
+  margin-left: 10px;
+}
+
+.user > div > p {
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.action-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px;
+  border: 1px solid #eee;
+  padding: 7px 10px;
+  border-radius: 5px;
+  box-shadow: inset 0px 1px 8px -3px #ababab;
+  flex-wrap: wrap;
+  background-color: rgb(249, 249, 249);
+}
+
+.action-button {
+  height: 36px;
+  background: white;
+  border: 1px solid #c8c8c8;
+  border-radius: 18px;
+  font-size: 13px;
+  padding: 0px 15px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  opacity: 0.7;
+  margin-left: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.note {
+  min-height: 60px;
+  max-height: 300px;
+  height: max-content;
+  background: #ffd9ffaa;
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: inset 0px 1px 8px -3px #ababab;
+  overflow: hidden;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.timestamp {
+  width: 150px;
+  height: fit-content;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  top: 0px;
+  padding: 7px 5px;
+  right: 0px;
+  border-radius: 0px 0px 0px 10px;
+  background-color: #3498db;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
+  color: #fff;
+  font: 700 15px/1 "Lato", sans-serif;
+  text-shadow: 0 1px 1px rgb(0 0 0 / 20%);
+  text-transform: uppercase;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+img.edit-icon {
+  position: absolute;
+  top: 2px;
+  right: 165px;
+  cursor: pointer !important;
 }
